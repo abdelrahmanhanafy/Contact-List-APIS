@@ -1,0 +1,4 @@
+{
+    "mongoUrl":"mongodb+srv://dbUser:db123456@cluster0-azpdo.mongodb.net/dev?retryWrites=true&w=majority",
+    "port":"8400"
+}

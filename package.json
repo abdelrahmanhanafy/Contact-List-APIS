@@ -1,0 +1,17 @@
+{
+  "name": "contact-list",
+  "version": "1.0.0",
+  "description": "Contact List APIS",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main"
+  },
+  "author": "Hanafy",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10"
+  }
+}
