@@ -45,7 +45,7 @@ module.exports = (express) => {
         try {
             let _user = await userModel.findOne({ name: req.body.user });
             let contacts = await model.find({ user: _user }).sort({ _id: -1 }).limit(5).populate('user', 'name  -_id')
-            res.send(`Contacts for user ${_user.name}: ${contacts}`);
+            res.send(`Recent Contacts for user ${_user.name}: ${contacts}`);
         }
         catch (error) { res.status(400).send(`Something went wrong`) }
     });

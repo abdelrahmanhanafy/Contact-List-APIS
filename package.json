@@ -4,7 +4,7 @@
   "description": "Contact List APIS",
   "main": "main.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test jest --testTimeout=10000",
+    "test": "jest --testTimeout=10000",
     "start": "node main"
   },
   "author": "Hanafy",
