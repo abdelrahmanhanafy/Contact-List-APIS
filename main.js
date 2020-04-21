@@ -10,8 +10,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ limit: "10mb" }));
 
 //Import Routes
+const contact = require('./Controllers/contacts')(express);
 //Routes
-
+app.use('/contacts', contact)
 //DbConnect
 const dbConnect = async () => {
     try {
@@ -23,3 +24,4 @@ const dbConnect = async () => {
     catch (error) { console.log(`can't connect to DB, something went wrong`) };
 }
 dbConnect();
+
