@@ -11,8 +11,10 @@ app.use(bodyParser.json({ limit: "10mb" }));
 
 //Import Routes
 const contact = require('./Controllers/contacts')(express);
+
 //Routes
 app.use('/contacts', contact)
+
 //DbConnect
 const dbConnect = async () => {
     try {
@@ -25,3 +27,4 @@ const dbConnect = async () => {
 }
 dbConnect();
 
+module.exports = app;

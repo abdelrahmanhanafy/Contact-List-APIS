@@ -4,7 +4,7 @@ let contact = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true,
+        unique: true,   
         match: [/[a-zA-Z0-9_-]+@[A-Z0-9]+\.[A-Z]/i, "Please enter a valid e-mail address"]
     },
     mobile: {

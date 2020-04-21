@@ -4,6 +4,7 @@
   "description": "Contact List APIS",
   "main": "main.js",
   "scripts": {
+    "test": "cross-env NODE_ENV=test jest --testTimeout=10000",
     "start": "node main"
   },
   "author": "Hanafy",
@@ -14,5 +15,16 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.10",
     "mongoose-unique-validator": "^2.0.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "jest": "^25.4.0",
+    "supertest": "^4.0.2"
   }
 }
