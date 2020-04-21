@@ -3,6 +3,7 @@ const model = require('../Core/contact');
 const userModel = require('../Core/user');
 module.exports = (express) => {
     let router = express.Router();
+    //Middleware For authentication && authorization
     router.use(async (req, res, next) => {
         let authorization = req.header('authorization');
         let deviceToken = req.header('deviceToken')
@@ -21,6 +22,7 @@ module.exports = (express) => {
             res.send(`You aren't authorized to access this resource`);
         }
     })
+    
     //Create && Get Endpoints
     router.post('/addContact', async (req, res) => {
         try {
